@@ -1,0 +1,215 @@
+@import "compass";
+
+$tabletSize: 740px;
+
+/*--------------------------------------------------------------
+	TYPOGRAPHY (copied from Indigo)
+-------------------------------------------------------------- */
+$linkColour: #034da1;
+
+html {
+	font-size: 62.5%;
+	}
+body {
+	font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+ 
+h1 {
+	font-weight: normal;
+	font-size: 28px;
+	margin: 16px 0 10px 0;
+}
+
+h2 {
+  font-size: 24px;
+  font-size: 2.4rem;
+  font-weight: 300;
+
+  line-height: 40.7999992370606px;
+  margin-bottom: 12px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  outline-color: rgb(51, 51, 51);
+  outline-style: none;
+  outline-width: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  vertical-align: baseline;
+  width: 517.625px;
+  word-wrap: break-word;
+}
+
+@media (max-width: 779px) {
+	h2 {
+	  font-size: 24px;
+	  font-size: 2.4rem;
+	}
+}
+
+p {
+	font-size: 13px;
+	font-size: 1.3rem;
+	line-height: 1.5em;
+
+	a {
+		@include hover-link();
+		@include link-colors($linkColour);
+	}
+}
+
+/*--------------------------------------------------------------
+	MAP
+-------------------------------------------------------------- */
+$mapDefaultFillColour: 		#c9bad6;
+$mapActiveFillColour: 		#64497b;
+$mapBackgroundColour:		#fafafa;
+$mapBorderColour: 			#ccc;
+
+//Container needed to fix weird bug in which map exceeds width of its div
+.interactive-map-container {
+	@include box-sizing(border-box);
+	vertical-align: top;
+	//padding-right: 20px;
+	overflow: hidden;
+}
+
+.interactive-map {
+	background-color: $mapBackgroundColour;
+}
+
+.background {
+	fill: none;
+	pointer-events: all;
+}
+/* Map styles and scripts adapted from http://www.tnoda.com/blog/2013-12-07 */
+
+#countries {
+	fill: $mapDefaultFillColour;
+	stroke: #fff;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+	cursor: pointer;
+	-moz-transition-property: all;
+	-o-transition-property: all;
+	-webkit-transition-property: all;
+	transition-property: all;
+	-moz-transition-duration: 0.1s;
+	-o-transition-duration: 0.1s;
+	-webkit-transition-duration: 0.1s;
+	transition-duration: 0.1s;
+	-moz-transition-timing-function: ease-in-out;
+	-o-transition-timing-function: ease-in-out;
+	-webkit-transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in-out;
+}
+#countries .active {
+	fill: $mapActiveFillColour;
+}
+
+pre.prettyprint {
+	border: 1px solid $mapBorderColour;
+	margin-bottom: 0;
+	padding: 9.5px;
+}
+
+
+/*--------------------------------------------------------------
+	MAP PANEL
+-------------------------------------------------------------- */
+.interactive-map-panel {
+	@include box-sizing(border-box);
+	width: 30%;
+	vertical-align: top;
+	position: relative;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	border-left: 20px solid white;
+}
+.interactive-map-panel__content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 15px;
+	bottom:0;
+	border-top: 25px solid #c9bad6;
+	
+	h1, h2, h3, p {
+		margin-left: 15px;
+	}
+}
+.box {
+	//border-top: 25px solid #c9bad6;;
+
+
+  //box-shadow: 0 1px 0 0 rgba(0,0,0,.1);
+  @include box-sizing(border-box);
+}
+
+/*--------------------------------------------------------------
+	RESPONSIVE LAYOUT ADDITIONS
+-------------------------------------------------------------- */
+@media (max-width: $tabletSize) {
+	.interactive-map-panel__content {
+		position: relative;
+		padding: 15px;
+		border-top-width: 0;
+		* {
+			margin-left: 0;
+		}
+	}
+	.interactive-map-container {
+		padding:0;
+		margin-bottom: 20px;
+	}
+	.interactive-map-panel {
+		width: 100%;
+		overflow-y: auto;
+		border-left-width: 0;
+	}
+}
+
+/*--------------------------------------------------------------
+	CSS TABLES
+-------------------------------------------------------------- */
+//used to set equal height cols for map/panel
+.table {
+	display: table;
+	border-collapse: separate;
+	table-layout: fixed;
+	width: 100%;
+}
+.table__row {
+	display: table-row;
+}
+
+.table__col {
+	display: table-cell;
+}
+
+@media (max-width: $tabletSize) {
+	.table__col {
+		display: block;
+	}
+}
+/*--------------------------------------------------------------
+	FORM ELEMENTS
+-------------------------------------------------------------- */
+.ges-countryList__select {
+	font-size: 13px;
+	font-size: 1.3rem;
+	@include inline-block;
+	margin-bottom:16px;
+}
+.ges-countryList__label {
+	@include inline-block;
+	font-size: 14px;
+	font-size: 1.4rem;
+	font-weight: 500;
+	margin-right: 20px;
+	margin-bottom:16px;
+}

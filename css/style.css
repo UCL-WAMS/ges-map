@@ -1,0 +1,185 @@
+/*--------------------------------------------------------------
+	TYPOGRAPHY (copied from Indigo)
+-------------------------------------------------------------- */
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem; }
+
+h1 {
+  font-weight: normal;
+  font-size: 28px;
+  margin: 16px 0 10px 0; }
+
+h2 {
+  font-size: 24px;
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 40.7999992370606px;
+  margin-bottom: 12px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  outline-color: #333333;
+  outline-style: none;
+  outline-width: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  vertical-align: baseline;
+  width: 517.625px;
+  word-wrap: break-word; }
+
+@media (max-width: 779px) {
+  h2 {
+    font-size: 24px;
+    font-size: 2.4rem; } }
+p {
+  font-size: 13px;
+  font-size: 1.3rem;
+  line-height: 1.5em; }
+  p a {
+    text-decoration: none;
+    color: #034da1; }
+    p a:hover, p a:focus {
+      text-decoration: underline; }
+
+/*--------------------------------------------------------------
+	MAP
+-------------------------------------------------------------- */
+.interactive-map-container {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: top;
+  overflow: hidden; }
+
+.interactive-map {
+  background-color: #fafafa; }
+
+.background {
+  fill: none;
+  pointer-events: all; }
+
+/* Map styles and scripts adapted from http://www.tnoda.com/blog/2013-12-07 */
+#countries {
+  fill: #c9bad6;
+  stroke: #fff;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  cursor: pointer;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.1s;
+  -o-transition-duration: 0.1s;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out; }
+
+#countries .active {
+  fill: #64497b; }
+
+pre.prettyprint {
+  border: 1px solid #ccc;
+  margin-bottom: 0;
+  padding: 9.5px; }
+
+/*--------------------------------------------------------------
+	MAP PANEL
+-------------------------------------------------------------- */
+.interactive-map-panel {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 30%;
+  vertical-align: top;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border-left: 20px solid white; }
+
+.interactive-map-panel__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 15px;
+  bottom: 0;
+  border-top: 25px solid #c9bad6; }
+  .interactive-map-panel__content h1, .interactive-map-panel__content h2, .interactive-map-panel__content h3, .interactive-map-panel__content p {
+    margin-left: 15px; }
+
+.box {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*--------------------------------------------------------------
+	RESPONSIVE LAYOUT ADDITIONS
+-------------------------------------------------------------- */
+@media (max-width: 740px) {
+  .interactive-map-panel__content {
+    position: relative;
+    padding: 15px;
+    border-top-width: 0; }
+    .interactive-map-panel__content * {
+      margin-left: 0; }
+
+  .interactive-map-container {
+    padding: 0;
+    margin-bottom: 20px; }
+
+  .interactive-map-panel {
+    width: 100%;
+    overflow-y: auto;
+    border-left-width: 0; } }
+/*--------------------------------------------------------------
+	CSS TABLES
+-------------------------------------------------------------- */
+.table {
+  display: table;
+  border-collapse: separate;
+  table-layout: fixed;
+  width: 100%; }
+
+.table__row {
+  display: table-row; }
+
+.table__col {
+  display: table-cell; }
+
+@media (max-width: 740px) {
+  .table__col {
+    display: block; } }
+/*--------------------------------------------------------------
+	FORM ELEMENTS
+-------------------------------------------------------------- */
+.ges-countryList__select {
+  font-size: 13px;
+  font-size: 1.3rem;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  margin-bottom: 16px; }
+
+.ges-countryList__label {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-right: 20px;
+  margin-bottom: 16px; }

@@ -1,0 +1,85 @@
+# Node.js with Express and Stlyus
+public/css/*.css
+public/css/main/*.css
+public/css/admin/*.css
+/.monitor
+
+.sass-cache/
+
+# Eclipse
+/.project
+/.settings
+/.buildpath
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
+
+# Windows
+Thumbs.db
+
+#Mac
+.DS_Store
+
+# Ignore this in Clock Harness projects because it is created by the build system.
+/Config/vhost.conf
+
+# Vim
+.*.sw[a-z]
+*.un~i
+tags
+
+# OsX
+.DS_Store
+# Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+# npm
+/node_modules
+npm-debug.log
+
+#page speed test records
+/pagespeedTests
+
+# node-cluster
+/pids
+*.sock
+
+# ZSH Cake plugin cache
+/.cake_task_cache
+
+# ignore the CSS folder
+
+# css/
+
+#ignore BAK folder
+BAK/
+
+#css map files
+*.css.map
+
+# ignore sublime text 2 stuff
+
+/*.sublime-project
+*.sublime-workspace
+sftp-config*.json
+
+
+# gem
+*.gem
+config.rb
+
+
+config.codekit
+
+sass/.sass-cache/
+.codekit-cache
+
+**/*/.DS_Store
+
+.DS_Store
+
+
+ajax/loadCountry.php
